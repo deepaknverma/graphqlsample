@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/server",
+    "allowJs": true,
+    "target": "es2017",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "sourceMap": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "./src/**/*",
+    "./test/**/*"
+  ]
+}
