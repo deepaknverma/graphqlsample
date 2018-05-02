@@ -1,6 +1,6 @@
 import { makeExecutableSchema } from 'graphql-tools';
 import { tradie } from './types/tradie';
-import { jobAssignment } from './types/jobAssignment';
+import { jobAssignment, jobAssignmentSchema } from './types/jobAssignment';
 import { job } from './types/job';
 
 const RootQuery = `
@@ -29,4 +29,5 @@ const SchemaDefinition = `
     mutation: Mutation
   }
 `;
-export { SchemaDefinition, RootQuery, Mutation, tradie, jobAssignment, job };
+
+export { SchemaDefinition, RootQuery, Mutation, tradie, jobAssignment, job, jobAssignmentSchema };

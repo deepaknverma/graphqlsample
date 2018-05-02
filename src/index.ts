@@ -4,7 +4,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 import { maskErrors } from 'graphql-errors';
 import { merge } from 'lodash';
 
-import { SchemaDefinition, RootQuery, Mutation, tradie, jobAssignment, job  } from './TypeDefs';
+import { SchemaDefinition, RootQuery, Mutation, tradie, jobAssignment, job, jobAssignmentSchema  } from './TypeDefs';
 import { tradieResolver, jobResolver, jobAssignmentResolver } from './Resolvers';
 
 // maskErrors(typeDefs);
@@ -17,7 +17,7 @@ const formatError = error => ({
 });
 
 const executableSchema = makeExecutableSchema({
-  typeDefs: [SchemaDefinition, RootQuery, Mutation, tradie, jobAssignment, job],
+  typeDefs: [SchemaDefinition, RootQuery, Mutation, tradie, job, jobAssignment],
   resolvers: merge({}, tradieResolver, jobResolver, jobAssignmentResolver)
 });
 
